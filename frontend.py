@@ -8,7 +8,7 @@ from jina import Client
 st.title('Video Search Engine')
 st.write('This is a video search engine based on Jina. You can search for videos by entering a description of the video. The search results will be displayed below.')
 
-port = 62128
+port = 51000
 c = Client(host=f'grpc://0.0.0.0:{port}')
 
 VIDEO_FILE_PATH = 'tmp/videos'

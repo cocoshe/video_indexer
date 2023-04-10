@@ -2,18 +2,18 @@ import torch
 import clip
 from jina import Executor, requests, DocumentArray, Document
 from PIL import Image
-from Executors.BaseModel import base_model
+# from Executors.BaseModel import base_model
 
 
 class VideoExecutor(Executor):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        # print('\nLoading CLIP model...')
+        print('\nLoading CLIP model...')
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
-        # model_name = 'ViT-B/32'
-        # self.model, self.preprocess = clip.load(model_name, device=self.device)
-        # print('\nCLIP model loaded.')
-        self.preprocess, self.model = base_model.get_preprocessor_and_model()
+        model_name = 'ViT-B/32'
+        self.model, self.preprocess = clip.load(model_name, device=self.device)
+        print('\nCLIP model loaded.')
+        # self.preprocess, self.model = base_model.get_preprocessor_and_model()
 
     @requests(on='/video_encode')
     def encode(self, docs: DocumentArray, **kwargs):
