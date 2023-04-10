@@ -1,0 +1,4 @@
+jtype: TextExecutor
+metas:
+  py_modules:
+    - text_executor.py
