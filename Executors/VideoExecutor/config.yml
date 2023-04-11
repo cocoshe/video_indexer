@@ -1,4 +1,0 @@
-jtype: VideoExecutor
-metas:
-  py_modules:
-    - video_executor.py

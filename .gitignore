@@ -128,8 +128,10 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-toy.yml
-test.py
-client.py
+
 .idea/*
 .idea
+images/*
+clips/*
+hf_test.py
+image.png
