@@ -43,7 +43,7 @@ def hf_search(video_uri, disc, topk):
     batch_size = 8
     batch_num = len(images) // batch_size
     logits_list = []
-    for i in range(batch_num):
+    for i in tqdm(range(batch_num), desc='searching'):
         batch = images[i * batch_size: (i + 1) * batch_size]
         batch = processor(text=[disc], images=batch, return_tensors="pt", padding=True)
         outputs = model(**batch)

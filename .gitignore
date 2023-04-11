@@ -135,3 +135,5 @@ images/*
 clips/*
 hf_test.py
 image.png
+tmp/*
+tmp
